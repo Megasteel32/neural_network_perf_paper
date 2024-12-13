@@ -68,7 +68,7 @@ def test_model(model_name):
         print("-" * 50)
         print(f"Accuracy: {accuracy:.2f}%")
         print("\nClassification Report:")
-        print(classification_report(all_labels, all_preds))
+        print(classification_report(all_labels, all_preds, zero_division=0))
 
         # Plot confusion matrix
         plt.figure(figsize=(10, 8))
